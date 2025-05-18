@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BiblioApi",
+    "\\BiblioApi\\Controllers",
+    "\\BiblioApi\\data",
+    "\\BiblioApi\\Models",
+    "\\BiblioApi\\wwwroot"
+  ],
+  "SelectedNode": "\\BiblioApi\\Controllers\\LivresController.cs",
+  "PreviewInSolutionExplorer": false
+}

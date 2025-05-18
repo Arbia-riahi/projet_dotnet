@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\hp\\Desktop\\dotnet backend\\BiblioApi\\wwwroot\\images\\070a731f-4a4c-45b8-b0d1-6a08072bf02a.png",
+      "PackagePath": "staticwebassets\\images\\070a731f-4a4c-45b8-b0d1-6a08072bf02a.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\Desktop\\dotnet backend\\BiblioApi\\wwwroot\\images\\82c52171-756b-4c80-8923-af9a2339bef7.png",
+      "PackagePath": "staticwebassets\\images\\82c52171-756b-4c80-8923-af9a2339bef7.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\Desktop\\dotnet backend\\BiblioApi\\wwwroot\\images\\c012c8ad-cf6c-4b55-80f5-70cab1f7a950.png",
+      "PackagePath": "staticwebassets\\images\\c012c8ad-cf6c-4b55-80f5-70cab1f7a950.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\Desktop\\dotnet backend\\BiblioApi\\wwwroot\\images\\d700bd6d-d339-4466-8298-59715bb29782.png",
+      "PackagePath": "staticwebassets\\images\\d700bd6d-d339-4466-8298-59715bb29782.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\Desktop\\dotnet backend\\BiblioApi\\wwwroot\\images\\e01a80d9-4fe6-4011-8042-b4528fee5300.png",
+      "PackagePath": "staticwebassets\\images\\e01a80d9-4fe6-4011-8042-b4528fee5300.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\Desktop\\dotnet backend\\BiblioApi\\wwwroot\\images\\f3108a13-21d1-4da7-a1a3-0db55a5b5b47.png",
+      "PackagePath": "staticwebassets\\images\\f3108a13-21d1-4da7-a1a3-0db55a5b5b47.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BiblioApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BiblioApi.props",
+      "PackagePath": "build\\BiblioApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BiblioApi.props",
+      "PackagePath": "buildMultiTargeting\\BiblioApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BiblioApi.props",
+      "PackagePath": "buildTransitive\\BiblioApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
