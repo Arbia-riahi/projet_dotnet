@@ -19,7 +19,7 @@ public class LivresController : ControllerBase
         _env = env;
     }
 
-    // ✅ GET: Tous les utilisateurs peuvent consulter les livres
+    //  GET: Tous les utilisateurs peuvent consulter les livres
     [Authorize(Roles = "admin,user")]
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Livre>>> GetAll()
@@ -43,7 +43,7 @@ public class LivresController : ControllerBase
 
 
 
-    // ✅ POST: Seul l’admin peut créer un livre
+    //  POST: Seul l’admin peut créer un livre
     [Authorize(Roles = "admin")]
     [HttpPost]
     public async Task<IActionResult> Create([FromForm] Livre livre, IFormFile? image)
@@ -68,7 +68,7 @@ public class LivresController : ControllerBase
     }
 
 
-    // ✅ PUT: Seul l’admin peut modifier un livre
+    //  PUT: Seul l’admin peut modifier un livre
     [Authorize(Roles = "admin")]
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromForm] Livre livre, IFormFile? image)
@@ -78,7 +78,7 @@ public class LivresController : ControllerBase
 
         var form = Request.Form;
 
-        // ✅ Mise à jour seulement si le champ est présent dans la requête
+        //  Mise à jour seulement si le champ est présent dans la requête
         if (form.ContainsKey("titre") && !string.IsNullOrWhiteSpace(form["titre"]))
             existing.Titre = form["titre"];
 
@@ -94,7 +94,7 @@ public class LivresController : ControllerBase
         if (form.ContainsKey("prix") && decimal.TryParse(form["prix"], out decimal prix))
             existing.Prix = prix;
 
-        // 📸 Nouvelle image ?
+        // Nouvelle image ?
         if (image != null)
         {
             if (!string.IsNullOrEmpty(existing.ImageUrl))
@@ -120,7 +120,7 @@ public class LivresController : ControllerBase
     }
 
 
-    // ✅ DELETE: Seul l’admin peut supprimer un livre
+    // DELETE: Seul l’admin peut supprimer un livre
     [Authorize(Roles = "admin")]
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)

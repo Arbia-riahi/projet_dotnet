@@ -9,5 +9,5 @@ public class Livre
     public string Genre { get; set; } = string.Empty;
     public string? ImageUrl { get; set; }
 
-    public decimal Prix { get; set; } // ✅ Ajout du prix
+    public decimal Prix { get; set; } // Ajout du prix
 }

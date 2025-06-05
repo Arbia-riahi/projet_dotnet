@@ -6,8 +6,6 @@ using BibliothequeAPI.Models;
 namespace BibliothequeAPI.Helpers;
 
 
-
-
 public class JwtHelper
 {
     public static string GenerateJwt(Utilisateur user, IConfiguration config)

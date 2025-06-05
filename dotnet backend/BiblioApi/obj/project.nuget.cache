@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fDDmz/Naig4=",
+  "dgSpecHash": "c+n5HEZPTmE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\hp\\Desktop\\dotnet backend\\BiblioApi\\BiblioApi.csproj",
+  "projectFilePath": "C:\\Users\\hp\\Desktop\\projet_dotnet\\dotnet backend\\BiblioApi\\BiblioApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hp\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

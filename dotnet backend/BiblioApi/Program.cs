@@ -7,20 +7,20 @@ using BibliothequeAPI.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // -----------------------------
-// 🔐 Lire la clé JWT depuis appsettings.json
+//  Lire la clé JWT depuis appsettings.json
 // -----------------------------
 var jwtKey = builder.Configuration["Jwt:Key"];
 
 
 
 // -----------------------------
-// 📌 Ajouter le DbContext
+//  Ajouter le DbContext
 // -----------------------------
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // -----------------------------
-// 🔐 Ajouter l’authentification JWT
+//  Ajouter l’authentification JWT
 // -----------------------------
 builder.Services.AddAuthentication(options =>
 {
@@ -44,14 +44,14 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddAuthorization();
 
 // -----------------------------
-// 📌 Ajouter les services Web API
+//  Ajouter les services Web API
 // -----------------------------
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // -----------------------------
-// 🌐 Ajouter CORS pour autoriser Angular (localhost:4200)
+//  Ajouter CORS pour autoriser Angular (localhost:4200)
 // -----------------------------
 builder.Services.AddCors(options =>
 {
@@ -65,17 +65,10 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// -----------------------------
-// 🧪 Swagger en dev
-// -----------------------------
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+
 
 // -----------------------------
-// 🔐 Middleware de sécurité
+//  Middleware de sécurité
 // -----------------------------
 app.UseHttpsRedirection();
 app.UseStaticFiles(); // Pour les images dans wwwroot/images

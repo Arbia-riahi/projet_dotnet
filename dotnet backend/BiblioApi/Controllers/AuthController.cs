@@ -36,7 +36,7 @@ public class AuthController : ControllerBase
         if (utilisateur == null)
             return Unauthorized("Email incorrect");
 
-        // 🔐 Authentification différente selon le rôle
+        //  Authentification différente selon le rôle
         if (utilisateur.Role == "admin")
         {
             if (dto.Password != utilisateur.PasswordHash)
@@ -63,7 +63,7 @@ public class AuthController : ControllerBase
 
 
 
-    // ✅ REGISTER pour créer un utilisateur (admin ou user)
+    //  REGISTER pour créer un utilisateur (forcé par defaut a le role user)
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromForm] RegisterDTO dto, IFormFile? photo)
     {
@@ -76,7 +76,7 @@ public class AuthController : ControllerBase
             Prenom = dto.Prenom,
             Email = dto.Email,
             Telephone = dto.Telephone,
-            Role = "user", // Forcé ici
+            Role = "user", // Forcé ici le role est user 
             PasswordHash = BCrypt.Net.BCrypt.HashPassword(dto.Password)
         };
 
@@ -112,7 +112,7 @@ public class AuthController : ControllerBase
 
 
 
-    // ✅ MODIFIER PROFIL
+    //  MODIFIER PROFIL
     [HttpPut("update/{id}")]
     public async Task<IActionResult> UpdateProfile(int id, [FromForm] Utilisateur updatedUser, IFormFile? photo)
     {
@@ -131,7 +131,7 @@ public class AuthController : ControllerBase
         if (!string.IsNullOrWhiteSpace(updatedUser.Telephone))
             existing.Telephone = updatedUser.Telephone;
 
-        // 📸 Nouvelle photo ?
+        //  Nouvelle photo 
         if (photo != null)
         {
             if (!string.IsNullOrEmpty(existing.PhotoUrl))
@@ -155,7 +155,7 @@ public class AuthController : ControllerBase
         return Ok(existing);
     }
 
-    // ✅ GET /api/auth/{id} → afficher les infos du profil
+    // GET /api/auth/{id} → afficher les infos du profil
     [HttpGet("{id}")]
     public async Task<IActionResult> GetUtilisateur(int id)
     {

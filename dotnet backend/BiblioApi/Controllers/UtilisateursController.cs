@@ -21,7 +21,7 @@ public class UtilisateursController : ControllerBase
         _context = context;
         _env = env;
     }
-    // ✅ GET un utilisateur par ID (utilisé dans la modification)
+    // GET un utilisateur par ID (utilisé dans la modification)
     [HttpGet("{id}")]
     [Authorize(Roles = "admin")]
     public async Task<IActionResult> GetOne(int id)
@@ -34,7 +34,7 @@ public class UtilisateursController : ControllerBase
     }
 
 
-    // ✅ GET mon profil actuel depuis le token
+    //  GET mon profil actuel depuis le token
     [HttpGet("me")]
     [Authorize]
     public async Task<IActionResult> GetMe()
@@ -45,7 +45,7 @@ public class UtilisateursController : ControllerBase
         return Ok(user);
     }
 
-    // ✅ GET all
+    //  GET all
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Utilisateur>>> GetAll()
     {
@@ -53,7 +53,7 @@ public class UtilisateursController : ControllerBase
     }
 
 
-    // ✅ POST avec upload de photo
+    //  POST avec upload de photo
     [HttpPost]
     public async Task<IActionResult> Create([FromForm] Utilisateur user, IFormFile? photo)
     {
@@ -129,7 +129,7 @@ public class UtilisateursController : ControllerBase
     }
 
 
-    // ✅ DELETE
+    //  DELETE
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {

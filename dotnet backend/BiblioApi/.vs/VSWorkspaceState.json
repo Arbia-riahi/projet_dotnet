@@ -1,12 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Controllers",
-    "\\data",
-    "\\DTOs",
-    "\\Helpers",
-    "\\Models"
+    ""
   ],
-  "SelectedNode": "\\Models\\Utilisateur.cs",
+  "SelectedNode": "\\BiblioApi.http",
   "PreviewInSolutionExplorer": false
 }
